@@ -1,0 +1,142 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Mecánico</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Mecánico Homepage</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <!-- Contenido Principal -->
+  <ion-content>
+    <ion-list>
+      <ion-item (click)="toggleDetail('alertas')">
+        <ion-label>Alertas de Mantenimiento</ion-label>
+        <ion-badge slot="end">Detalles</ion-badge>
+      </ion-item>
+      <ion-list *ngIf="showDetail === 'alertas'" inset>
+        <ion-item>Revisar frenos en camión #101</ion-item>
+        <ion-item>Cambio de aceite en camión #102</ion-item>
+        <ion-item>Revisión de suspensión en camión #103</ion-item>
+      </ion-list>
+
+      <ion-item (click)="toggleDetail('estadoCamiones')">
+        <ion-label>Estado de los Camiones</ion-label>
+        <ion-badge slot="end">Detalles</ion-badge>
+      </ion-item>
+      <ion-list *ngIf="showDetail === 'estadoCamiones'" inset>
+        <ion-item>Camión #101: En funcionamiento</ion-item>
+        <ion-item>Camión #102: En mantenimiento</ion-item>
+        <ion-item>Camión #103: Fuera de servicio</ion-item>
+      </ion-list>
+
+      <ion-item (click)="toggleDetail('historialModificaciones')">
+        <ion-label>Historial de Modificaciones</ion-label>
+        <ion-badge slot="end">Detalles</ion-badge>
+      </ion-item>
+      <ion-list *ngIf="showDetail === 'historialModificaciones'" inset>
+        <ion-item>Camión #101: Cambio de frenos el 2024-10-25</ion-item>
+        <ion-item>Camión #102: Reemplazo de aceite el 2024-10-26</ion-item>
+      </ion-list>
+
+      <ion-item (click)="toggleDetail('calendarioMantenimiento')">
+        <ion-label>Calendario de Mantenimiento</ion-label>
+        <ion-badge slot="end">Detalles</ion-badge>
+      </ion-item>
+      <ion-list *ngIf="showDetail === 'calendarioMantenimiento'" inset>
+        <ion-item>2024-11-01: Mantenimiento preventivo camión #101</ion-item>
+        <ion-item>2024-11-05: Inspección camión #102</ion-item>
+      </ion-list>
+
+      <ion-item (click)="toggleDetail('checklists')">
+        <ion-label>Checklists de Mantenimiento</ion-label>
+        <ion-badge slot="end">Detalles</ion-badge>
+      </ion-item>
+      <ion-list *ngIf="showDetail === 'checklists'" inset>
+        <ion-item>1. Verificar aceite</ion-item>
+        <ion-item>2. Revisar frenos</ion-item>
+        <ion-item>3. Comprobar luces</ion-item>
+        <ion-item>4. Inspeccionar neumáticos</ion-item>
+      </ion-list>
+
+      <ion-item (click)="toggleDetail('registroPiezas')">
+        <ion-label>Registro de Piezas</ion-label>
+        <ion-badge slot="end">Detalles</ion-badge>
+      </ion-item>
+      <ion-list *ngIf="showDetail === 'registroPiezas'" inset>
+        <ion-item>Pieza: Freno, Camión: #101, Fecha: 2024-10-25</ion-item>
+        <ion-item>Pieza: Aceite, Camión: #102, Fecha: 2024-10-26</ion-item>
+      </ion-list>
+
+      <ion-item (click)="toggleDetail('reportes')">
+        <ion-label>Reportes de los Camiones</ion-label>
+        <ion-badge slot="end">Detalles</ion-badge>
+      </ion-item>
+      <ion-list *ngIf="showDetail === 'reportes'" inset>
+        <ion-item>Camión #101: Reporte de ruidos extraños</ion-item>
+        <ion-item>Camión #102: Reporte de pérdida de potencia</ion-item>
+      </ion-list>
+
+      <ion-item (click)="toggleDetail('inboxReportes')">
+        <ion-label>Inbox para Reportes</ion-label>
+        <ion-badge slot="end">Detalles</ion-badge>
+      </ion-item>
+      <ion-list *ngIf="showDetail === 'inboxReportes'" inset>
+        <ion-item>Reportar: Camión #103 - Problemas de transmisión</ion-item>
+      </ion-list>
+
+      <ion-item (click)="toggleDetail('inboxCorreos')">
+        <ion-label>Inbox para Correos al Administrador</ion-label>
+        <ion-badge slot="end">Detalles</ion-badge>
+      </ion-item>
+      <ion-list *ngIf="showDetail === 'inboxCorreos'" inset>
+        <ion-item>Enviar: Solicitud de piezas para camión #101</ion-item>
+      </ion-list>
+
+      <ion-item (click)="toggleDetail('registroHoras')">
+        <ion-label>Registro de Horas de Entrada y Salida</ion-label>
+        <ion-badge slot="end">Detalles</ion-badge>
+      </ion-item>
+      <ion-list *ngIf="showDetail === 'registroHoras'" inset>
+        <ion-item>Entrada: 08:00 AM, Salida: 05:00 PM</ion-item>
+      </ion-list>
+
+      <ion-item (click)="toggleDetail('calendarioEventos')">
+        <ion-label>Calendario de Eventos Importantes</ion-label>
+        <ion-badge slot="end">Detalles</ion-badge>
+      </ion-item>
+      <ion-list *ngIf="showDetail === 'calendarioEventos'" inset>
+        <ion-item>2024-11-10: Capacitación de seguridad</ion-item>
+      </ion-list>
+
+      <ion-item (click)="toggleDetail('inboxInasistencias')">
+        <ion-label>Inbox para Inasistencias</ion-label>
+        <ion-badge slot="end">Detalles</ion-badge>
+      </ion-item>
+      <ion-list *ngIf="showDetail === 'inboxInasistencias'" inset>
+        <ion-item>Reportar inasistencia: 2024-10-30</ion-item>
+      </ion-list>
+
+      <ion-item (click)="toggleDetail('anuncios')">
+        <ion-label>Ver Anuncios</ion-label>
+        <ion-badge slot="end">Detalles</ion-badge>
+      </ion-item>
+      <ion-list *ngIf="showDetail === 'anuncios'" inset>
+        <ion-item>Anuncio: Mantenimiento programado el 2024-11-01</ion-item>
+      </ion-list>
+
+      <ion-item (click)="toggleDetail('documentos')">
+        <ion-label>Documentos Importantes</ion-label>
+        <ion-badge slot="end">Detalles</ion-badge>
+      </ion-item>
+      <ion-list *ngIf="showDetail === 'documentos'" inset>
+        <ion-item>Manual de usuario camión #101</ion-item>
+      </ion-list>
+    </ion-list>
+  </ion-content>
+  
+

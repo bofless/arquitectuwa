@@ -1,0 +1,92 @@
+<div class="ion-page" id="main-content">
+  <ion-header [translucent]="true">
+    <ion-toolbar>
+      <ion-title slot="start">Repartidores</ion-title>
+      <ion-segment value="all" slot="end">
+        <ion-segment-button value="all">
+          <ion-label>Inicio</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="favorites" (click)="navigateTo('/pedidosrepartidores')">
+          <ion-label>Pedidos</ion-label>
+        </ion-segment-button>
+      </ion-segment>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content [fullscreen]="true">
+    <ion-header collapse="condense">
+      <ion-toolbar>
+        <ion-title size="large">Repartidor</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Fechas Importantes</ion-card-title>
+        <ion-card-subtitle>Días feriados, cumpleaños y demás</ion-card-subtitle>
+      </ion-card-header>
+    
+      <ion-card-content>
+        No hay ninguna fecha importante durante este mes.
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Anuncios</ion-card-title>
+        <ion-card-subtitle>Información importante entregada por la administración.</ion-card-subtitle>
+      </ion-card-header>
+    
+      <ion-card-content>
+        No hay ningún aviso nuevo.
+      </ion-card-content>
+    </ion-card>
+
+    <ion-button id="popover-button">Ver manuales</ion-button>
+    <ion-popover trigger="popover-button" [dismissOnSelect]="true">
+      <ng-template>
+        <ion-content>
+          <ion-list>
+            <ion-item [button]="true" [detail]="false">Manual del buen conductor</ion-item>
+            <ion-item [button]="true" [detail]="false">Reglamento de la empresa</ion-item>
+            <ion-item [button]="true" [detail]="false">Partes de un auto</ion-item>
+          </ion-list>
+        </ion-content>
+      </ng-template>
+    </ion-popover>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Enviar Notificación</ion-card-title>
+      </ion-card-header>
+    
+      <ion-card-content>
+        <ion-item>
+          <ion-select label="Motivo del correo" placeholder="Selecciona uno">
+            <ion-select-option value="">Notificar futura ausencia</ion-select-option>
+            <ion-select-option value="nes">Notificar accidente laboral</ion-select-option>
+            <ion-select-option value="n64">Notificar falla de algún vehículo</ion-select-option>
+            <ion-select-option value="ps">Notificar salida temprana</ion-select-option>
+            <ion-select-option value="genesis">Notificar futura entrada tardía</ion-select-option>
+            <ion-select-option value="saturn">Notificar problema de salud</ion-select-option>
+            <ion-select-option value="snes">Otro</ion-select-option>
+          </ion-select>
+        </ion-item>
+    
+        <ion-item>
+          <ion-input label="Asunto" label-placement="fixed" placeholder="Escribir aquí"></ion-input>
+        </ion-item>
+    
+        <ion-item>
+          <ion-input label="" label-placement="fixed" placeholder="Escribir motivo"></ion-input>
+        </ion-item>
+    
+        <ion-item>
+          <ion-checkbox>¿Desea guardar comprobante del correo enviado?</ion-checkbox>
+        </ion-item>
+
+        <ion-button expand="full" (click)="enviarReporte()">Enviar Reporte</ion-button>
+      </ion-card-content>
+    </ion-card>
+    
+    

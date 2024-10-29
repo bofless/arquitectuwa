@@ -1,0 +1,41 @@
+/* mecánico.page.scss */
+
+/* Estilo para centrar todo el contenido */
+ion-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente */
+    justify-content: center; /* Centra verticalmente */
+    min-height: 100vh; /* Asegura que ocupe toda la altura de la vista */
+  }
+  
+  /* Estilo para la lista */
+  ion-list {
+    width: 80%; /* Ancho de la lista (ajusta según tus necesidades) */
+    max-width: 600px; /* Ancho máximo para evitar que sea demasiado ancho */
+  }
+  
+  /* Estilo para ion-item */
+  ion-item {
+    width: 100%; /* Asegura que los ítems ocupen el ancho completo de la lista */
+  }
+  
+  /* Estilo personalizado para los ion-badge */
+  ion-badge {
+    background-color: rgba(255, 255, 255, 0.5); /* Color de fondo personalizable */
+    color: black; /* Cambia el color del texto a negro */
+  }
+  
+  /* Estilo para el footer */
+  .custom-footer {
+    background: rgba(77, 77, 77, 0.341); /* Fondo gris translúcido */
+    backdrop-filter: blur(50px); /* Efecto de desenfoque */
+    width: 100%; /* Asegura que el footer ocupe el ancho completo */
+  }
+  
+  .footer-title {
+    color: white; /* Cambia el color del texto a blanco */
+    text-align: center;
+    font-size: 16px;
+  }
+  

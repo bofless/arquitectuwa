@@ -1,0 +1,39 @@
+/* Footer */
+.custom-footer {
+    background: rgba(77, 77, 77, 0.7); /* Fondo gris oscuro translúcido */
+    backdrop-filter: blur(10px); /* Efecto de desenfoque */
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .footer-title {
+    color: white; /* Texto en blanco */
+    font-size: 16px;
+  }
+  
+  /* Cards */
+  ion-card {
+    width: 40%; /* Ancho de las cards */
+    margin: 10px auto; /* Centra las cards */
+  }
+  
+  /* Media query para pantallas más pequeñas */
+  @media (max-width: 600px) {
+    .footer-title {
+      font-size: 14px; /* Fuente más pequeña en móviles */
+    }
+  
+    ion-card {
+      width: 90%; /* Cards más anchas en móviles */
+    }
+  }
+  
+  /* Fondo transparente en ion-content para ver el efecto translúcido del footer */
+  ion-content {
+    --background: transparent;
+  }
+  

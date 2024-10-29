@@ -1,0 +1,101 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Administrador </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Administrador</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-list>
+    <!-- Registro de Tiempos -->
+    <ion-item (click)="toggleDetail('registroTiempos')">
+      <ion-label>Registro de Tiempos</ion-label>
+      <ion-badge slot="end">12</ion-badge>
+    </ion-item>
+    <ion-list *ngIf="showDetail === 'registroTiempos'" inset>
+      <ion-item>Registro 1: 10:00 AM - 11:00 AM</ion-item>
+      <ion-item>Registro 2: 01:00 PM - 02:00 PM</ion-item>
+      <ion-item>Registro 3: 03:00 PM - 04:00 PM</ion-item>
+    </ion-list>
+
+    <!-- Calendario -->
+    <ion-item (click)="toggleDetail('calendario')">
+      <ion-label>Calendario</ion-label>
+      <ion-badge slot="end">3 Eventos</ion-badge>
+    </ion-item>
+    <ion-list *ngIf="showDetail === 'calendario'" inset>
+      <ion-item>Evento 1: Reunión a las 10:00 AM</ion-item>
+      <ion-item>Evento 2: Taller a las 2:00 PM</ion-item>
+      <ion-item>Evento 3: Entrega de Informes a las 4:00 PM</ion-item>
+    </ion-list>
+
+    <!-- Notificaciones -->
+    <ion-item (click)="toggleDetail('notificaciones')">
+      <ion-label>Notificaciones</ion-label>
+      <ion-badge slot="end">5 Nuevas</ion-badge>
+    </ion-item>
+    <ion-list *ngIf="showDetail === 'notificaciones'" inset>
+      <ion-item>Notificación 1: Reunión a las 10:00 AM</ion-item>
+      <ion-item>Notificación 2: Informe pendiente</ion-item>
+      <ion-item>Notificación 3: Actualización de sistema</ion-item>
+    </ion-list>
+
+    <!-- Historial de Modificaciones -->
+    <ion-item (click)="toggleDetail('historialModificaciones')">
+      <ion-label>Historial de Modificaciones</ion-label>
+      <ion-badge slot="end">10 Cambios</ion-badge>
+    </ion-item>
+    <ion-list *ngIf="showDetail === 'historialModificaciones'" inset>
+      <ion-item>Cambio 1: Modificación de datos de usuario</ion-item>
+      <ion-item>Cambio 2: Actualización de precios</ion-item>
+      <ion-item>Cambio 3: Cambio de horario de atención</ion-item>
+    </ion-list>
+
+    <!-- Historial de Órdenes -->
+    <ion-item (click)="toggleDetail('historialOrdenes')">
+      <ion-label>Historial de Órdenes</ion-label>
+      <ion-badge slot="end">7 Órdenes</ion-badge>
+    </ion-item>
+    <ion-list *ngIf="showDetail === 'historialOrdenes'" inset>
+      <ion-item>Orden 1: Pedido #123 - Completado</ion-item>
+      <ion-item>Orden 2: Pedido #124 - En Proceso</ion-item>
+      <ion-item>Orden 3: Pedido #125 - Cancelado</ion-item>
+    </ion-list>
+
+    <!-- Gestión de Anuncios -->
+    <ion-item (click)="toggleDetail('gestionAnuncios')">
+      <ion-label>Gestión de Anuncios</ion-label>
+      <ion-badge slot="end">2 Activos</ion-badge>
+    </ion-item>
+    <ion-list *ngIf="showDetail === 'gestionAnuncios'" inset>
+      <ion-item>Anuncio 1: Promoción de invierno</ion-item>
+      <ion-item>Anuncio 2: Descuento de fin de año</ion-item>
+    </ion-list>
+
+    <!-- Informes -->
+    <ion-item (click)="toggleDetail('informes')">
+      <ion-label>Informes</ion-label>
+      <ion-badge slot="end">4 Nuevos</ion-badge>
+    </ion-item>
+    <ion-list *ngIf="showDetail === 'informes'" inset>
+      <ion-item>Informe 1: Ventas del mes</ion-item>
+      <ion-item>Informe 2: Análisis de mercado</ion-item>
+      <ion-item>Informe 3: Proyecciones anuales</ion-item>
+    </ion-list>
+
+    <!-- Gestión de Documentos -->
+    <ion-item (click)="toggleDetail('gestionDocumentos')">
+      <ion-label>Gestión de Documentos</ion-label>
+      <ion-badge slot="end">8 Documentos</ion-badge>
+    </ion-item>
+    <ion-list *ngIf="showDetail === 'gestionDocumentos'" inset>
+      <ion-item>Documento 1: Manual de usuario</ion-item>
+      <ion-item>Documento 2: Políticas de empresa</ion-item>
+      <ion-item>Documento 3: Reporte anual</ion-item>
+    </ion-list>
+  </ion-list>

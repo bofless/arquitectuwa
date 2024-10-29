@@ -1,0 +1,74 @@
+/* Estilos generales */
+.ion-page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Asegura que la página ocupe toda la altura de la ventana */
+}
+
+ion-content {
+  flex: 1; /* Permite que el contenido ocupe el espacio restante */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra los elementos en el eje horizontal */
+  justify-content: center; /* Centra los elementos en el eje vertical */
+}
+
+ion-toolbar {
+  justify-content: center; /* Centra el contenido del toolbar */
+  --background: #fff; /* Fondo blanco para el toolbar (no transparente) */
+  color: black; /* Cambia el color del texto del toolbar si es necesario */
+}
+
+ion-card, 
+ion-button,
+ion-select, 
+ion-input, 
+ion-checkbox {
+  width: 40%; /* Ajusta el ancho a 40% */
+  margin: 10px auto; /* Centra los elementos */
+}
+
+ion-card {
+  text-align: center; /* Centra el texto dentro del card */
+}
+
+.custom-footer {
+  background: rgba(77, 77, 77, 0.341); /* Fondo gris translúcido */
+  backdrop-filter: blur(50px); /* Efecto de desenfoque */
+  position: sticky; /* Cambia a sticky para que se mantenga en la parte inferior */
+  bottom: 0; /* Fija el footer en la parte inferior */
+  left: 0; /* Alinea el footer a la izquierda */
+  right: 0; /* Alinea el footer a la derecha */
+}
+
+.footer-title {
+  color: white; /* Cambia el color del texto a blanco */
+  text-align: center;
+  font-size: 16px;
+}
+
+ion-button {
+  width: 40%; /* Ajusta el ancho del botón a 40% */
+  margin: 10px auto; /* Centra el botón */
+  display: flex; /* Asegura que el botón use flexbox */
+  justify-content: center; /* Centra el contenido dentro del botón */
+}
+
+/* Media queries para dispositivos móviles */
+@media (max-width: 576px) {
+  ion-card, 
+  ion-button,
+  ion-select, 
+  ion-input, 
+  ion-checkbox {
+    width: 90%; /* Ajusta el ancho a 90% en pantallas pequeñas */
+  }
+
+  .footer-title {
+    font-size: 14px; /* Reduce el tamaño de fuente en el footer */
+  }
+
+  ion-toolbar {
+    font-size: 14px; /* Ajusta el tamaño de fuente en el toolbar */
+  }
+}

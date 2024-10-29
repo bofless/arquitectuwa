@@ -1,0 +1,34 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="header-title">
+      GreenFlow
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">GreenFlow</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <strong>¡Bienvenido a GreenFlow!</strong>
+    <p>¿Cómo desea iniciar la sesión?</p>
+    <div class="button-group">
+      <ion-button shape="round" (click)="goToRepartidor()">Repartidor</ion-button>
+      <ion-button shape="round" (click)="goToAdministrador()">Administrador</ion-button>
+      <ion-button shape="round" (click)="goToMecanico()">Mecánico</ion-button>
+    </div>
+  </div>
+</ion-content>
+
+<ion-footer class="custom-footer">
+  <ion-toolbar>
+    <ion-title class="footer-title">
+      <span>&copy; Todos los derechos reservados a GreenFlow</span>
+    </ion-title>
+  </ion-toolbar>
+</ion-footer>
+

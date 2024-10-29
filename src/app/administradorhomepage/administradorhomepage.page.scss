@@ -1,0 +1,49 @@
+/* administradorhomepage.page.scss */
+
+/* Estilo para centrar todo el contenido */
+ion-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente */
+    justify-content: flex-start; /* Centra verticalmente */
+    min-height: 100vh; /* Asegura que ocupe toda la altura de la vista */
+}
+
+/* Estilo personalizado para los ion-badge */
+ion-badge {
+    background-color: rgba(255, 255, 255, 0.5); /* Color de fondo personalizable */
+    color: black; /* Cambia el color del texto a negro */
+}
+
+/* Estilo para la lista */
+ion-list {
+    width: 40%; /* Ancho de la lista */
+    padding: 0; /* Elimina el padding predeterminado */
+}
+
+/* Estilo para los ion-item dentro de la lista */
+ion-item {
+    display: flex; /* Utiliza flexbox para alinear el contenido */
+    justify-content: space-between; /* Espacia el label y el badge */
+    align-items: center; /* Centra verticalmente el contenido */
+    width: 100%; /* Asegura que ocupe todo el ancho del elemento de la lista */
+}
+
+/* Estilo para los labels dentro de ion-item */
+ion-label {
+    text-align: left; /* Centra el texto del label */
+    flex-grow: 1; /* Permite que el label ocupe el espacio disponible */
+}
+
+/* Estilo para el footer */
+.custom-footer {
+    background: rgba(77, 77, 77, 0.341); /* Fondo gris translúcido */
+    backdrop-filter: blur(50px); /* Efecto de desenfoque */
+    width: 100%; /* Ancho completo del footer */
+}
+
+.footer-title {
+    color: white; /* Cambia el color del texto a blanco */
+    text-align: center; /* Centra el texto */
+    font-size: 16px;
+}
